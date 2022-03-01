@@ -154,3 +154,304 @@
                 // y ya después escribir en otra cadena el código CSS.
 
                 console.log("%crancio","color:red;background:blue;")
+
+
+
+// _>--DOM(Document Object Mode)--<_
+
+    // Es una API que con las herramientas necesarias que nos permite representar un
+    // documento "HTML", "XML" y "XHTML".
+
+        //____ Nodo ____//
+
+        // Es cualquier etiqueta del cuerpo, como un parrafo, el mismo "body", o incluso
+        // las etiquetas de una lista.
+
+             // >> Tipo de nodo "Document" type(9) <<
+                // Es el nodo raíz a partir del cual se derivan el resto de nodos. Todos
+                // los nodos derivan del document.
+
+            // >> Tipo de nodo "Element" type(1) <<
+                // Son nodos definidos por etiquetas "HTML", como por ejemplo un "h1", "P", "div", etc.
+
+            // >> Tipo de nodo "Text" type(3) <<
+                //Es el texto dentro de un nodo "Element", se considera un nuevo nodo hijo
+                // de tipo text (Text).
+                
+            // >> Tipo de nodo "Attribute" type(2) <<
+                // Los atributos de las etiquetas como; type, src, etc definen nodos, (en JavaScript
+                // no los veremos como nodos, sino como función asociada al nodo de tipo element).
+
+            // >> Tipo de nodo "Comentarios y otros" type(8) <<
+                // Los comentarios como y otros elementos como las declaraciones doctype en
+                // cabecera de los documentos HTML generan nodos.
+
+        //____ Metodos de selección de elementos ____//
+
+            // >> getElementById() <<
+                    // Selecciona por elemento id, traemos al documento JavaScript un id del HTML.
+
+                    Document.getElementById("parrafo");// En los parentesis va el nombre que le dimos en el HTML.
+
+            // >> getElementByTageName() <<
+                    // Selecciona todos los elementos que coincidan con el nombre de la etiqueta especificada.
+                    // Basicamente traemos etiquetas tal cual como las ecribimos en el HTML, p, div, h1, etc.
+                    
+                    Document.getElementByTaName("p");// En los parentesis va la etiqueta que está en el HTML.
+            
+            // >> querySelector() <<
+                    // Con este selector podemos llamar a "clases" y "id" del HTML.
+
+                    Document.querySelector(".parrafo");// En los parentesis va la "clases"(.) o "id"(#).
+
+            // >> querySelectorAll() <<
+                    // Su función es igual a la de "querySelector", pero a diferencia de esta, lo que hace es
+                    // selecionar todos los elementos que tengan la "calse" o "id" que estamos llamando e
+                    // internamente nos va a formar una lista con esos elementos.
+
+                    Document.querySelectorAll(".parrafo");// En los parentesis va la "clases"(.) o "id"(#).
+
+
+
+        //____ Definir para definir, obtener y eliminar valores de atributos ____// -element.-
+        
+            // >> setAttribute() <<
+                    // Modifica el valor de un atributo.
+
+                    const rango = document.querySelector(".rango");
+                    valorRango = rango.setAttribute("type","number"); //En los parentesis ve primera el atributo"type", y después al valor que lo queremos modificar.
+            
+            // >> getAttribute() <<
+                    // Obtiene el valor de un atributo.
+
+                    const rango1 = document.querySelector(".rango");
+                    valorRango1 = rango1.getAttribute("type"); // Lo que hará será decirnos en pantalla el valor que tiene el atributo
+            
+            // >> removeAttribute() <<
+                    // Remueve el valor de un atributo.
+
+                    const rango2 = document.querySelector(".rango");
+                    valorRango2 = rango2.removeAttribute("type",""); //Si al final ponemos comillas llamando al valor, nos mostrará en consola que existe "type", pero si solo ponemos "type" no nos mostraría nada.
+
+
+
+        //____ Atributos globales ____//
+
+        // Funciona como opcciones de "setAttribute" para modificar el contenido que teniamos en el HTML.
+
+            // >> contentEditable <<
+                    // Lo que hace es dar la opción al usuario de poder editar el texto al cual le
+                    // hemos adjuntado este modificador.
+
+                    const titulo = document.querySelector("titulo");
+                    titulo.setAttribute("contentEditable","true");
+
+            // >> dir <<
+                    // Con esto indicamos la direccioón del texto, si queremos que sea de DER a IZQ(rtl)
+                    // o de IZQ a DER(ltr).
+
+                    const titulo = document.querySelector("titulo");
+                    titulo.setAttribute("dir","rtl");
+
+            // >> hidden <<
+                    // Lo que hace es ocultarnos o mostrarnos un elemento, nos lo muestra esi en el HTML
+                    // ya le habíamos puesto "hidden", de lo contrario nos lo ocultará.
+
+                    const titulo = document.querySelector("titulo");
+                    titulo.setAttribute("hidden","true"); // Para activarlo hay que acompañarlo de un valor boleano.
+
+            // >> tabindex <<
+                    // Indica si el elemento puede obtener focus de input.
+
+                    const titulo = document.querySelector("titulo");
+                    titulo.setAttribute("tabindex","0"); // Para activarlo hay que acompañarlo de un valor numerico.
+
+            // >> title <<
+                    // Nos mostrará una pequeña información cuando coloquemos el cursor sobre un cierto elemento.
+
+                    const titulo = document.querySelector("titulo");
+                    titulo.setAttribute("title","este es un titulo");
+
+            // NOTA -->   Estos son solo algunos atributos globales, de estos existen cantidades.
+                        // También son atributos que podemos manejar dentro de las etiqueta    s en el HTML.
+
+
+
+        //____ Atributos de Inputs ____//
+
+            // >> className <<
+                    // Lo que hace es mostrarnos el nombre de la clase que le dimos al input.
+
+                    const input = document.querySelector(".input-normal");
+                    document.write(input.className);
+
+            // >> value <<
+                    // Lo que hace es mostrarnos los valores de "value" que le dimos al input.
+
+                    const input = document.querySelector(".input-normal");
+                    document.write(input.value);
+            // >> type <<
+                    // Lo que hace es mostrarnos los valores de "type" que le dimos al input,
+                    // también podemos modificar el "type" desde JavaScript.
+
+                    const input = document.querySelector(".input-normal");
+                    input.type = "text";
+
+            // >> accept <<
+                    // Funciona para mostrar el botón de "seleccionar archivo", pero para esto
+                    // el "type" del HTML de tener el valor "file", y ya en el JavaScript le
+                    // decimos que queremos que el boton acepte.
+
+                    const input = document.querySelector(".input-normal");
+                    input.accept = "iamge/png";
+
+            // >> form <<
+                    // Este atributo solamente va en el HTML, y es para poder enlazar un input
+                    // que esta fuera del formulario, ya que si no está dentro del "form" el
+                    // botón "submit" no tendría nada que enviar, entonces lo que hacemos es
+                    // poner dentro del input "submit" el código form="id del formulario".
+
+                    HTML - ejemplo;
+                    // <form id="formulario">
+                    //     <input type="text" name="">
+                    // </form>
+                    // <input type="submit" form="formulario">
+
+            // >> minlength <<
+                    // Sirve para designarle a un imput la cantida de caracteres debe tener para
+                    // poder enviar la info, si no cumple con la natidad de caracteres no enviará
+                    // la información y nos mostrará un pestaña diciendonos la cantidad de
+                    // caracteres requeridos.
+                    // este atributo también lo podemos poner directamente en el html dentro del input.
+
+                    const input = document.querySelector(".input-normal");
+                    input.minLength = 5;
+
+            // >> placeholder <<
+                    // Lo que hace es mostrarnos dentro del input un breve valor que podemos dejar 
+                    // como mensaje o guía para el usuario.
+                    // También lo podemos poner dentro del HTML.
+
+                    const input = document.querySelector(".input-normal");
+                    input.placeholder = "Nombre";
+
+            // >> required <<
+                    // Cumple la función de no dejar enviar los datos si uno de los inputs al que le
+                    // hayamos dado este tributo no tenga ningún dato escrito dentro de él, y al
+                    // igual que "minLength" nos mostrará una pestaña de que se debe llenar el campo.
+
+                    const input = document.querySelector(".input-normal");
+                    input.required = "true";
+
+            // >> Atributo style <<
+                    // Es poder cambiar propiedades CSS dentro del JavaScript.
+                    // element.
+
+                    const titulo = document.querySelector(".titulo");
+                    titulo.style.color = "#a22";
+
+
+
+        //____ Clases, classList y métodos de classList ____//
+
+            // >> add() <<
+                    // Lo que hace es añadirnos una nueva clase como si fuera casi un complemento
+                    // para una clase ya creada en HTML.
+                    // Nosostros ya tenemos en HTML una etiqueta con una clase definida, pero
+                    // en JavaScript podemos crear otra clase que podemos cambiar su esrilo
+                    // en CSS como una etiqueta normal, y además agregarle esas caracteristicas
+                    // a la etiqueta al cual nos estamos refiriendo en JavaScript.
+
+                    const titulo = document.querySelector(".titulo"); //Clase del HTML
+                    titulo.classList.add("grande"); //Nueva clase, esta clase se puede tratar en css como una clase normal.
+
+            // >> remove() <<
+                    // Lo que hace es remover una clase. Hay que tener en cuenta que en HTML se
+                    // pueden poner dos clases a una misma etiqueta, y esto se hace solamente dejando
+                    // espacio entre ellas. Tenemos ya las dos clases y a cada una le dimos valores
+                    // diferentes en CSS, aquí es donde podemos remover una de las etiquetas afectando
+                    // así al resultado.
+
+                    const titulo = document.querySelector(".titulo");
+                    titulo.classList.remove("grande");
+
+            // >> item() <<
+                    // Devuelve la clase del índice especificado. Si tenemos varias clases dentro de 
+                    // una misma etiqueta del HTML, podemos llamarlas y que se muestren en pantalla,
+                    // esta es básicamento la función de "item". Se debe tener en cuenta que para
+                    // llamar a una de las clases se llamas por su posición, y al igual que los arrays
+                    // las clases empiezan con la posición "cero 0".
+
+                    const titulo = document.querySelector(".titulo");
+                    let valor = titulo.classList.titem(2);
+                    document.write(valor);
+
+            // >> contains() <<
+                    // Lo que hace es decirnos si existe una clase que nosotros le preguntemos, dentro
+                    // de la etiqueta a la que nos estamos refiriendo, el resultado sin bucle será boleano.
+
+                    const titulo = document.querySelector(".titulo");
+                    let valor = titulo.classList.contains("grande"); //Clase que estamos consultando
+
+                    if (valor) {
+                        document.write("La clase existe");
+                    }
+                    else {
+                        document.write("La clase no existe");
+                    }
+            // >> replace() <<
+                    // Lo que hace es remplazar una clase por otra. La primera es la clase que se pregunta si 
+                    // existe, y de ser así, la sengunda sería con la que se remplazaría.
+
+                    const titulo = document.querySelector(".titulo");
+                    let valor = titulo.classList.replace("grande","pequeño");
+
+            // >> toggle() <<
+                    // Lo que hacemos es consultar si en la etiqueta se encuentra una dicha clase, y si
+                    // la clse no existe la va a agregar, y si la clase si existe lo que hará será removerla.
+                    // también hay un segundo parametro que es donde ponemos "true" para siempre agrgarla,
+                    // o "false" para siempre quitrla.
+
+                    const titulo = document.querySelector(".titulo");
+                    let valor = titulo.classList.toggle("grande","true");
+
+
+
+        //____ Obtención y modificación de elementos ____//
+
+            // >> textContent <<
+                    // Lo  que hace es mostrarnos el texto que hay dentro de la etiqueta del HTML,
+                    // esto nos muestra el texto, pero no las características como lo puede las de un <b></b>.
+                    // También si a <b></b> le decimos que no se muestre "hidden", igualmente nos lo va a mostrar.
+
+                    const titulo = document.querySelector(".titulo");
+                    let resultado = titulo.textContent;
+                    document.write(resultado);
+
+            // >> innerText <<(No estandar)
+            // fue crado debido a "intenet explorer" pero no se utiliza.
+                    // Funciona igual que "textContent", pero a diferencia de este, si a <b></b> le damos
+                    // que nos se muestre el "innerText" no nos lo va a mostrar.
+
+            // >> outerText <<
+                    // Existe pero ya no se usa.
+
+            // >> inerHTML <<
+                    // A diferencia de "textContent" si nos muestra las caracteristicas como las de un <b></b>,
+                    // pero no es capas de mostrarnos nada si al <b></b> le damos que no se muestre.
+                    // Eso afecta para la interpretación el navegador, pero si lo mostramos en un "alert"
+                    // nos mostrará todo el contenido de la etiqueta y además nos mostrará la parte del código
+                    // <b></b> incluso mostrandonos el "hidden" en código, si se lo dimos en el HTML.
+
+                    const titulo = document.querySelector(".titulo");
+                    let resultado = titulo.innerHTML;
+                    alert(resultado);
+                    
+            // >> outerHTML <<
+                    // Su función e interpretación es como la de "inerHTML", pero a diferencia de este lo que hace
+                    // es mostrarnos el código desde la etiqueta contenedora y no solo a una etiqueta que pueda ser
+                    // afectada para no mostrarse como en los ejemplos anteriores. En pocas palabras "inerHTML"
+                    // te muestra contenido y código afectado, y "outerHTML" te muestra todo en código. También
+                    // funciona en un "alert".
+
+

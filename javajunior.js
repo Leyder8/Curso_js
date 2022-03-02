@@ -454,4 +454,206 @@
                     // te muestra contenido y código afectado, y "outerHTML" te muestra todo en código. También
                     // funciona en un "alert".
 
+        //____ Creación de elementos ____//
+
+                // >> createElement() <<
+                    // Su función es crear un nuevo elemento, por ejemplo crear una etiqueta <li></li>
+                    // dentro de la etiqueta a la que nos referimos en la clase.
+                    // . El nombre del nuevo elemento lo vamos a escribir en mayúscula.
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const item = document.createElement("LI"); //Va en mayúscula
+                    console.log(item);
+
+                // >> createTextNode() <<
+                    // Es muy similar a "createElement" pero a diferencia de este no crea un
+                    // nuevo elemento(etiqueta), sino que crea un nodo de texto(el contenido
+                    // de "texto" dentro de la etiqueta).
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const textDelItem = document.createTextNode("Este es un item de la lista");
+                    console.log(textDelItem);
+
+                // >> apenndChild() <<
+                    // Nos da la función de que podamos agregar el "createTextNode" dentro del
+                    // "createElement".
+                    
+                    const contenedor = document.querySelector(".contenedor");
+                    const item = document.createElement("LI");
+                    const textDelItem = document.createTextNode("Este es un item de la lista");
+
+                    item.appendChild(textDelItem);
+                    // También se pede poner dentro del contenedor:
+                    contenedor.appendChild(item);
+                    // También podemos agregarlo como texto:
+                    item.innerHTML("Este es un item de la lista");
+
+                // >> createDocumentFragment() <<
+                    // Su función es poder agregar varios "createElement" con sus respectivos
+                    // "createTextNode" sin consumir demasiados recursos.
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const fragmento = document.createDocumentFragment();
+
+                    for(i = 0; i < 20; i++){
+                        const item = document.createElement("LI");
+                        item.innerHTML("Este es un item de la lista");
+                        fragmento.appendChild(item);
+                    }
+                    contenedor.appendChild(fragmento);
+
+
+
+        //____ Obtención y modificación de childs ____//
+
+                // >> firstChild <<
+                    // Nos permitirá mostrar únicamente el primer elemento hijo de un elemento
+                    // padre, esto si hay varios hijos. Hay que teneer en cuenta que no deben
+                    // haber espacios ni un "enter" entre el elemento hijo y el padre, ya que eso
+                    // será contado como texto y será eso lo que nos mostrará.
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const primerHijo = contenedor.firstChild;
+                    console.log(primerHijo);
+
+                // >> lastChild <<
+                    // Funciona igual que "firstChild" con todos sus parametros, la única 
+                    // es que nos muestra es el último elemento hijo del padre. 
+
+                // >> firstElementChild <<
+                    // Nos soluciona el problema que tenemos en "firstChild" y "lastChild" de 
+                    // del espacio o en "enter" entre el padre y el hijo, con "firstElementChild"
+                    // ya podemos diagrmar correctamente en HTML y que nos muestro el primer 
+                    // elemento hijo.
+
+                // >> lastElementChild <<
+                    // Funciona tal cual que "firstElementChild", pero lo que hace es mostrarnos
+                    // el último elemento hijo.
+
+                // >> firstNodes <<
+                    // Lo que hace es mostrarnos en un Nodelist todos los elementos dentro de
+                    // un elemento padre. No es un array.
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const hijos = contenedor.childNodes;
+                    console.log(hijos);
+                    // También lo podemos mostrar con un "forEach"
+                    hijos.forEach(hijo => console.log(hijo));
+
+                // >> children <<
+                    // Nos mostrará los elementos hijos de un padre pero solamente nos mostrará
+                    // el código más no el contenido de los hijos.
+                    // No se puede recorrer con un "forEach" pero si con un "for of".
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const hijos = contenedor.children;
+
+                    console.log(hijos);
+                    // o con "for of":
+                    for( hijo of hijos){
+                            console.log(hijo);
+                    }
+
+
+
+        //____ Métodos childs ____//
+
+                // >> replaceChild <<
+                    // Lo que hacemos es remplazar un element hijo del HTML por un nuevo 
+                    // elemento hijo creado en JavaScript.
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const h2_nuevo = document.createElement("H2");
+                    h2_nuevo.innerHTML = "Titulo";
+
+                    const h2_antiguo = document.querySelector(".h2");
+                    contenedor.replaceChild(h2_nuevo, h2_vijeo) //Primero va el elemento con el que vamos a remplazar y después en antiguo.
+
+                // >> removeChild <<
+                    // Lo que hace es remover un elemento hijo.
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const h2_nuevo = document.createElement("H2");
+
+                    const h2_antiguo = document.querySelector(".h2");
+                    contenedor.removeChild(h2_antiguo);
+
+                // >> hasChildNodes <<
+                    // Lo que hace es verificarnos si un elemento tiene hijos.
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const h2_nuevo = document.createElement("H2");
+
+                    const h2_antiguo = document.querySelector(".h2");
+
+                    let respuesta = contenedor.hasChildNodes();
+
+                    if(respuesta) {
+                            document.write("El elemento tiene hijos");
+                    } else {
+                            document.write("El elemento NO tiene hijos");
+                    }
+
+        //____ Propiedades de parents ____//
+                // Hay varias pero las más comúnes son las siguientes:
+
+                // >> parentElement <<
+                    // Lo que hace es decirnos cuál es el elemento padre del elemento que
+                    // estemos preguntando. Busca etiqueta HTML padre.
+
+                    const contenedor = document.querySelector(".contenedor");
+                    const h2_nuevo = document.createElement("H2");
+
+                    const h2_antiguo = document.querySelector(".h2");
+
+                    console.log(h2_antiguo.parentElement);
+
+                // >> parentNode <<
+                    // Funciona similar similar a "parentElement", pero el parentNode es
+                    // más que todo para casos especificos. Busca un nodo padre.
+
+
+
+        //____ Propiedades de siblings (hermanos) ____//
+
+                // >> nextSibling <<
+                    // Nos muestra el elemento hermano siguiente del elemento al que nos
+                    // estamos referenciando, solo que si dejamos un espacio o un "enter"
+                    // entre elementos hermanos eso nos lo va a contar y será lo que nos mostrará.
+                    
+                    const contenedor = document.querySelector(".contenedor");
+                    const h2_nuevo = document.createElement("H2");
+
+                    const h2_antiguo = document.querySelector(".h2");
+
+                    console.log(h2_antiguo.nextSubling);
+
+                // >> previousSibling <<
+                    // Funciona igual que "nextSubling", pero lo que hace es mostrarnos el
+                    // elemento previo al elemento al que nos estamos referenciando.
+                    // También lo afecta los espacios y los "enter" entre elementos hermanos.
+
+                // >> nextElementSibling <<
+                    // Funciona igual que "nextSibling" pero con este no afectan los espacios
+                    // o los "enter" entre los elementos hermanos.
+
+                // >> previousElementSibling <<
+                    // Funciona igual que "previousSibling" pero con este no afectan los espacios
+                    // o los "enter" entre los elementos hermanos.
+
+                // >> closest() <<
+                    // Lo que hacemos es mostrarnos el elemento hacendente del elemento  al que 
+                    // nos estamos referenciando, y al mismo tiempo que contenga la clase que
+                    // nosotros le estamos preguntando. esto es aplicado de elementos hijos donde su
+                    // elemento acendente va a ser el elemento padre.
+
+                    const div = document.querySelector(".div-3");
+
+                    console.log(div.closest(".div")); // En los parentesis pondremos la etiqueta que debe tener el elemento hacenedenete más cernano al elemento hijo.
+
+
+
+
+
+
 

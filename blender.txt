@@ -1,0 +1,56 @@
+Blender
+
+-Teclado numerico para ver las caras, también se puede emular con el teclado numerico superior en
+edit-preference. También se puede ver con la tecla eñe(Ñ)
+
+-En el teclado numerico hay una tecla con un punto(.), sirve para hacer zoom in esi estamos muy 
+lejos del objeto.
+
+-Con la tecla zeta(Z) sirva para ver los tipos de sombreado.
+
+-La tecla Shift sirva para mover el plano en dos direcciones
+
+-Tecla Tab sirve para ver dos de los modos que hay en Blender.
+
+-Tipos de cursor en la barra lateral IZQ.
+
+-Para eleminar un objeto oprimimmos la tecla (X) y "delete".
+
+-La tecla ge(G) sirve para mover el ojbeto de forma libre, y las podemos mezclar con la
+tecla equis(X) para mover en el eje X, y así mismo con las teclas ye(Y) y zeta(Z). Presionamos
+primero la (X) y después la tecla complemento.
+
+-Podemos cambiar las unidades en la barra lateral DER, en una pestaña con el simbolo de un "cono"
+con el nombre de "Scene Properties", y después en la ventana "Units" encontraremos la pestaña "Legths".
+Si oprimimos (G),(R) o (S) + (X),(Y) o (Z), y escribmos un valor numerico el objeto se va a mover en la dirección
+de la segunda tecla que oprimimos y en la medida que le dimos en "Legth".
+
+-Junto al objeto tenemos un punto amarillo, este se llama "pibote" y en relación a ese punto nuesro
+objeto sufre todas las transformaciones, para mover el "pibote" a donde esté el "cursor 3D" le damos
+en la barra superior "Objet"-"Set Origin"-"Origin 3D cursor".
+
+-El "pibote" también está acompañado de un pequeño circulo que lleva el nombre de "cursor 3D",
+ese cursor lo podemos mover con la tecla "shift" + "clic DER", a ese cursor le podemos dar 
+"shift" + (A) y nos mostrará diferentes obciones para agragar  nuestro espacio de trabajo, y para
+ubicar el cursor en todo el centro del espacio de trabajo le damos la tecla "Shift" + (C).
+
+-Podemos extruir una cara, vertice o arista ubicandonos en ella y oprimiendo la tecla "E" podemos
+extruirla en el eje (X),(Y) o (Z).
+
+-Podemos dividir un objeto en varias partes usando el eje X, Y y Z, para esto nos ubicamos en el 
+modo edición "edit mode" y oprimimos las teclas "Ctrl" + (R).
+
+-Para mover la luz nos pasamos al cursor mover "move" qu elo encontramos en la barra de cursores,
+y al igual que un objeto lo podremos mover en los ejes X,Y y Z.
+
+-Para colorear noa vamos debemos estar en modo edición "edición edit" y nos vamos a la barra 
+lateral DER en donde se encuentra "Scene Properties" y buscamos una ventana "Material Properties",
+nos vamos a la primera ventana y le damos en el icono del (+) que está a la derecha de esa ventana
+para crear un nuevo material y en la parte inferior de esa misma ventana le cambiamos el nombre,
+después seleccionamos el espacio del objeto a pintar y en la misma ventana aterior en la parte inferior
+le damos asignar "Assing" y ya para cambiar el color nos vamos a la tercera ventana "Surface" y 
+ahí cambiaremos el color en "Base color".
+
+-Para rotar la camara oprimimmos la tecla "N" y en la ventana que nos aparecerá nos iremos a la
+pestaña "View" y chekeraromos la opción "Camara to View" y ya de ahí podremos rotarla y hacer zoom
+con el scroll.

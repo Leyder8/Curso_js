@@ -31,7 +31,7 @@
         // >> table <<
             // Lo que hace es crearnos una tabla con los
             // valores que le dimos en código, funciona
-            // unicamente si trabajamos con una array o un objeto.
+            // unicamente si trabajamos con un array o un objeto.
 
             console.table([1,2,3,4,5]); //La info tiene que estar dentro de un array.
 
@@ -43,7 +43,7 @@
 
         // >> dir() << -"NO ESTANDAR"-
             // Nos despliega una lista interactiva con los
-            // valore asignados al objeto al que nos
+            // valores asignados al objeto al que nos
             // estamos refiriendo. Es similar a "info" en
             // como nos manda el resultado, pero cada uno
             // nos muestra el resultado de forma distinta.
@@ -56,7 +56,7 @@
         // >> count() <<
             // Lo que hace es mostrarnos las cantidades de
             // veces que hemos ejecutado esta misma función.
-            // Por ejemplo si esto lo ejecutamos 10 veces,
+            // Por ejemplo si esto lo ejecutamos 10 veces
             // en la consola nos aparecera 10 ejecuciones en
             // orden cronológico del 1 al 10.
 
@@ -94,16 +94,15 @@
                 // Lo que hacemos con esta función es poder crear
                 // grupos dentro de la consola, y dentro de este 
                 // grupo podemos agragar más grupos con este mismo
-                // código. Dentro de los parentesis ponemos ponemos
-                // como se llamaría el grupo. Es importante aclarar
-                // que el codigo debe ir escrito directamente en la
-                // consola.
+                // código. Dentro de los parentesis ponemos como se
+                // llamaría el grupo. Es importante aclarar que el
+                // codigo debe ir escrito directamente en la consola.
 
                 console.group("grupo 1")
 
             // >> groupEnd() <<
                 // Funciona en conjunto con "group", y lo que hace
-                // es eliminar un grupo que esté dentro de otro grupo,
+                // es eliminar un grupo que esté adentro de otro grupo,
                 // o cerrar el grupo contenedor agregandoselo al
                 // final de ese grupo.
 
@@ -112,7 +111,7 @@
             // >> groupCollapsed() <<
                 // Funciona similar a "group", pero a diferencia de este,
                 // lo que hace es mostrarnos de una vez el grupo de forma
-                // cerrado. Aqué también pomos utilizar el "groupEnd".
+                // cerrado. Aquí también podemos utilizar el "groupEnd".
 
                 console.groupCollapsed("grupo2")
 
@@ -159,7 +158,7 @@
 
 // _>--DOM(Document Object Mode)--<_
 
-    // Es una API que con las herramientas necesarias que nos permite representar un
+    // Es una API con las herramientas necesarias que nos permite representar un
     // documento "HTML", "XML" y "XHTML".
 
         //____ Nodo ____//
@@ -219,7 +218,7 @@
                     // Modifica el valor de un atributo.
 
                     const rango = document.querySelector(".rango");
-                    valorRango = rango.setAttribute("type","number"); //En los parentesis ve primera el atributo"type", y después al valor que lo queremos modificar.
+                    valorRango = rango.setAttribute("type","number"); //En los parentesis ve primera el atributo"type", y después al valor que queremos modificar.
             
             // >> getAttribute() <<
                     // Obtiene el valor de un atributo.
@@ -237,7 +236,7 @@
 
         //____ Atributos globales ____//
 
-        // Funciona como opcciones de "setAttribute" para modificar el contenido que teniamos en el HTML.
+        // Funciona como opciones de "setAttribute" para modificar el contenido que teniamos en el HTML.
 
             // >> contentEditable <<
                     // Lo que hace es dar la opción al usuario de poder editar el texto al cual le
@@ -254,7 +253,7 @@
                     titulo.setAttribute("dir","rtl");
 
             // >> hidden <<
-                    // Lo que hace es ocultarnos o mostrarnos un elemento, nos lo muestra esi en el HTML
+                    // Lo que hace es ocultarnos o mostrarnos un elemento, nos lo muestra si en el HTML
                     // ya le habíamos puesto "hidden", de lo contrario nos lo ocultará.
 
                     const titulo = document.querySelector("titulo");
@@ -273,7 +272,7 @@
                     titulo.setAttribute("title","este es un titulo");
 
             // NOTA -->   Estos son solo algunos atributos globales, de estos existen cantidades.
-                        // También son atributos que podemos manejar dentro de las etiqueta    s en el HTML.
+                        // También son atributos que podemos manejar dentro de las etiqueta en el HTML.
 
 
 
@@ -299,11 +298,11 @@
 
             // >> accept <<
                     // Funciona para mostrar el botón de "seleccionar archivo", pero para esto
-                    // el "type" del HTML de tener el valor "file", y ya en el JavaScript le
+                    // el "type" del HTML debe tener el valor "file", y ya en el JavaScript le
                     // decimos que queremos que el boton acepte.
 
                     const input = document.querySelector(".input-normal");
-                    input.accept = "iamge/png";
+                    input.accept = "image/png";
 
             // >> form <<
                     // Este atributo solamente va en el HTML, y es para poder enlazar un input
@@ -319,8 +318,8 @@
 
             // >> minlength <<
                     // Sirve para designarle a un imput la cantida de caracteres debe tener para
-                    // poder enviar la info, si no cumple con la natidad de caracteres no enviará
-                    // la información y nos mostrará un pestaña diciendonos la cantidad de
+                    // poder enviar la info, si no cumple con la cantidad de caracteres no enviará
+                    // la información y nos mostrará una pestaña diciendonos la cantidad de
                     // caracteres requeridos.
                     // este atributo también lo podemos poner directamente en el html dentro del input.
 
@@ -358,7 +357,7 @@
                     // Lo que hace es añadirnos una nueva clase como si fuera casi un complemento
                     // para una clase ya creada en HTML.
                     // Nosostros ya tenemos en HTML una etiqueta con una clase definida, pero
-                    // en JavaScript podemos crear otra clase que podemos cambiar su esrilo
+                    // en JavaScript podemos crear otra clase que podemos cambiar su estilo
                     // en CSS como una etiqueta normal, y además agregarle esas caracteristicas
                     // a la etiqueta al cual nos estamos refiriendo en JavaScript.
 
@@ -378,12 +377,12 @@
             // >> item() <<
                     // Devuelve la clase del índice especificado. Si tenemos varias clases dentro de 
                     // una misma etiqueta del HTML, podemos llamarlas y que se muestren en pantalla,
-                    // esta es básicamento la función de "item". Se debe tener en cuenta que para
-                    // llamar a una de las clases se llamas por su posición, y al igual que los arrays
+                    // esta es básicamente la función de "item". Se debe tener en cuenta que para
+                    // llamar a una de las clases se llama por su posición, y al igual que los arrays
                     // las clases empiezan con la posición "cero 0".
 
                     const titulo = document.querySelector(".titulo");
-                    let valor = titulo.classList.titem(2);
+                    let valor = titulo.classList.item(2);
                     document.write(valor);
 
             // >> contains() <<
@@ -408,8 +407,8 @@
 
             // >> toggle() <<
                     // Lo que hacemos es consultar si en la etiqueta se encuentra una dicha clase, y si
-                    // la clse no existe la va a agregar, y si la clase si existe lo que hará será removerla.
-                    // también hay un segundo parametro que es donde ponemos "true" para siempre agrgarla,
+                    // la clase no existe la agregará, y si la clase si existe lo que hará será removerla.
+                    // también hay un segundo parametro que es donde ponemos "true" para siempre agregarla,
                     // o "false" para siempre quitrla.
 
                     const titulo = document.querySelector(".titulo");
@@ -421,7 +420,7 @@
 
             // >> textContent <<
                     // Lo  que hace es mostrarnos el texto que hay dentro de la etiqueta del HTML,
-                    // esto nos muestra el texto, pero no las características como lo puede las de un <b></b>.
+                    // esto nos muestra el texto, pero no las características como lo puede ser las de un <b></b>.
                     // También si a <b></b> le decimos que no se muestre "hidden", igualmente nos lo va a mostrar.
 
                     const titulo = document.querySelector(".titulo");
@@ -429,7 +428,7 @@
                     document.write(resultado);
 
             // >> innerText <<(No estandar)
-            // fue crado debido a "intenet explorer" pero no se utiliza.
+            // fue crado debido a "intenet explorer", pero no se utiliza normalmente.
                     // Funciona igual que "textContent", pero a diferencia de este, si a <b></b> le damos
                     // que nos se muestre el "innerText" no nos lo va a mostrar.
 
@@ -438,8 +437,8 @@
 
             // >> inerHTML <<
                     // A diferencia de "textContent" si nos muestra las caracteristicas como las de un <b></b>,
-                    // pero no es capas de mostrarnos nada si al <b></b> le damos que no se muestre.
-                    // Eso afecta para la interpretación el navegador, pero si lo mostramos en un "alert"
+                    // pero no es capaz de mostrarnos nada si al <b></b> le damos que no se muestre.
+                    // Eso afecta para la interpretación en el navegador, pero si lo mostramos en un "alert"
                     // nos mostrará todo el contenido de la etiqueta y además nos mostrará la parte del código
                     // <b></b> incluso mostrandonos el "hidden" en código, si se lo dimos en el HTML.
 
@@ -459,7 +458,7 @@
                 // >> createElement() <<
                     // Su función es crear un nuevo elemento, por ejemplo crear una etiqueta <li></li>
                     // dentro de la etiqueta a la que nos referimos en la clase.
-                    // . El nombre del nuevo elemento lo vamos a escribir en mayúscula.
+                    // El nombre del nuevo elemento lo vamos a escribir en mayúscula.
 
                     const contenedor = document.querySelector(".contenedor");
                     const item = document.createElement("LI"); //Va en mayúscula
@@ -467,8 +466,8 @@
 
                 // >> createTextNode() <<
                     // Es muy similar a "createElement" pero a diferencia de este no crea un
-                    // nuevo elemento(etiqueta), sino que crea un nodo de texto(el contenido
-                    // de "texto" dentro de la etiqueta).
+                    // nuevo elemento(etiqueta), sino que crea un nodo de texto(contenido
+                    // "texto" dentro de la etiqueta).
 
                     const contenedor = document.querySelector(".contenedor");
                     const textDelItem = document.createTextNode("Este es un item de la lista");
@@ -508,17 +507,17 @@
 
                 // >> firstChild <<
                     // Nos permitirá mostrar únicamente el primer elemento hijo de un elemento
-                    // padre, esto si hay varios hijos. Hay que teneer en cuenta que no deben
-                    // haber espacios ni un "enter" entre el elemento hijo y el padre, ya que eso
-                    // será contado como texto y será eso lo que nos mostrará.
+                    // padre, esto si hay varios hijos. Hay que tener en cuenta que no deben
+                    // haber espacios ni un "enter" entre el elemento hijo y el padre en el HTML, 
+                    // ya que eso se cuenta como texto y será eso lo que nos mostrará.
 
                     const contenedor = document.querySelector(".contenedor");
                     const primerHijo = contenedor.firstChild;
                     console.log(primerHijo);
 
                 // >> lastChild <<
-                    // Funciona igual que "firstChild" con todos sus parametros, la única 
-                    // es que nos muestra es el último elemento hijo del padre. 
+                    // Funciona igual que "firstChild" con todos sus parametros, lo único 
+                    // es que nos mostrará el último elemento hijo del padre. 
 
                 // >> firstElementChild <<
                     // Nos soluciona el problema que tenemos en "firstChild" y "lastChild" de 
@@ -599,7 +598,7 @@
 
                 // >> parentElement <<
                     // Lo que hace es decirnos cuál es el elemento padre del elemento que
-                    // estemos preguntando. Busca etiqueta HTML padre.
+                    // estemos preguntando. Busca la etiqueta HTML padre.
 
                     const contenedor = document.querySelector(".contenedor");
                     const h2_nuevo = document.createElement("H2");
@@ -609,7 +608,7 @@
                     console.log(h2_antiguo.parentElement);
 
                 // >> parentNode <<
-                    // Funciona similar similar a "parentElement", pero el parentNode es
+                    // Funciona similar a "parentElement", pero el parentNode es
                     // más que todo para casos especificos. Busca un nodo padre.
 
 
@@ -618,7 +617,7 @@
 
                 // >> nextSibling <<
                     // Nos muestra el elemento hermano siguiente del elemento al que nos
-                    // estamos referenciando, solo que si dejamos un espacio o un "enter"
+                    // estamos refiriendo, solo que si dejamos un espacio o un "enter"
                     // entre elementos hermanos eso nos lo va a contar y será lo que nos mostrará.
                     
                     const contenedor = document.querySelector(".contenedor");
@@ -642,14 +641,14 @@
                     // o los "enter" entre los elementos hermanos.
 
                 // >> closest() <<
-                    // Lo que hacemos es mostrarnos el elemento hacendente del elemento  al que 
+                    // Lo que hace es mostrarnos el elemento hacendente del elemento  al que 
                     // nos estamos referenciando, y al mismo tiempo que contenga la clase que
                     // nosotros le estamos preguntando. esto es aplicado de elementos hijos donde su
-                    // elemento acendente va a ser el elemento padre.
+                    // elemento ascendente va a ser el elemento padre.
 
                     const div = document.querySelector(".div-3");
 
-                    console.log(div.closest(".div")); // En los parentesis pondremos la etiqueta que debe tener el elemento hacenedenete más cernano al elemento hijo.
+                    console.log(div.closest(".div")); // En los parentesis pondremos la etiqueta que debe tener el elemento hascendenete más cernano al elemento hijo.
 
 
 

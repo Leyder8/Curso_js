@@ -541,48 +541,127 @@
             // sintaxis del lenguaje, o algo por el estilo. Para solucionar esto utilizamos
             // el "Try catch".
 
-    //____ Try Catch ____//
+        //____ Try Catch ____//
+            // Maneja los errores y las excepciones. A diferencia del "if else" el Try no puede
+            // ejecuterse si no hay un Catch, en caso de que el Tray nos de un error, el Catch
+            // tiene que estar si o si.
+            // Nos permite manejar los errores y hacer que se efectue una acción si ocurre el error.
+            // El error lo ponemos en el Try, y la acción que queremos que se ejecute va en el Catch.
 
+            try{
+                lakssh
+            }
 
+            catch(error){
+                console.log("Hubo un error"); // Dentro de los parentesis del Catch podemos poner cualquier 
+            }                                 // valor, pero siempre va contener los valores que ponemos en el "Try"
 
-    //____ Sentencia Switch ____//
-        // Cuando queremos que el código sea más legible, expresiones muy particulares, o 
-        // analizar cosas muy complejas. Pero a nivel redimeinto es mucho mejor "if".
+            // Hay dos tipos de Catch: el Catch incondicional, y el Catch condisional.
+            // El Catch incondicional es cuando la acción que ponemos en el Catch es secilla, como
+            // lo puede ser un ".log", un ".write", etc.
+            // El Catch condicional es cuando ponemos una condición, como lo es "if", "if else", "else".
 
-            // >> Sintaxis y sentencia case <<
-            // >> Break <<
-            // >> Default <<
-                
+                //____ Finally ____//
+                // Trabaja en conjunto con "Try" y "Catch", y cumple la función de que lo que hagamos
+                // en "Finally" se va ejecutar haya o no un error. T iene prioridad por sobre todo.
 
-                let expre = "manzana";
+                try{
+                    lakssh
+                }
+        
+                catch(error){
+                    console.log("Hubo un error");
+                } finally {
+                    console.log("Igualmente se ejecuta");
+                }
 
-                switch(expre){
-                    case "banana":
+                //____ Sentencia Throw ____//
+                // Es para tirar un error.
+
+                try {
+                    throw {
+                        nombre:" Juan",
+                        edad:" 20 años"
+                    }
+                }
+
+                catch(pito) {
+                    console.log(pito)
+                }
+            
+            // Typeof: define el tipo de elemento que estamos utilizando, si es un string, un 
+            // número, un objeto, etc.
+
+            // Lo lo visto dentro del "try" y el "catch" anteriormente hay que saber que no  
+            // es algo que se use constantemente, sino que es una herramienta que se debe 
+            // utilizar en casos especificos y no se debe abusar de ella.
+
+        //____ Sentencia Switch ____//
+            // Cuando queremos que el código sea más legible, expresiones muy particulares, o 
+            // analizar cosas muy complejas. Pero a nivel redimeinto es mucho mejor "if".
+
+                // >> Sintaxis y sentencia case <<
+                // >> Break <<
+                // >> Default <<
+                    
+
+                    let expre = "manzana";
+
+                    switch(expre){
+                        case "banana":
+                            console.log("Es una fruta amarilla.");
+                            break;
+                        case "pera":
+                            console.log("Esta fruta es verde.");
+                            break;
+                        case "manzana":
+                            console.log("Es de color rojo.");
+                            break;
+                        default:
+                            alert("No es ninguna.");
+                    }
+
+                    // Con if:
+
+                    if(expre == "banana"){
                         console.log("Es una fruta amarilla.");
-                        break;
-                    case "pera":
+                    }
+                    else if(expre == "pera"){
                         console.log("Esta fruta es verde.");
-                        break;
-                    case "manzana":
+                    }
+                    else if(expre == "manzana"){
                         console.log("Es de color rojo.");
-                        break;
-                    default:
-                        alert("No es ninguna.");
-                }
+                    } else{
+                        console.log("No es ninguna.");
+                    }
 
-                // Con if:
+    //____ Trabajar de manera obsoleta ____//
 
-                if(expre == "banana"){
-                    console.log("Es una fruta amarilla.");
-                }
-                else if(expre == "pera"){
-                    console.log("Esta fruta es verde.");
-                }
-                else if(expre == "manzana"){
-                    console.log("Es de color rojo.");
-                } else{
-                    console.log("No es ninguna.");
-                }
+        //____ ¿Cuándo algo se vuelve obsoleto? ____//
+        
+            -"Deprecated"
+            - Inutil.
+            - No recomendado.
+            - Con bugs o fallos.
+            - Está por ser remplazado.
+            - Hay mejores formas de hacerlo.
+
+        //____ Los efectos negativos (aplicado a métodos, clases, propiedades) ____//
+
+            - Uso excesivo de recursos.
+            - Código con bugs o fallos.
+            - Código inecesariamnente largo.
+            - SEO.
+
+        //____ ¿Cómo verificar si está obsoleto? ____//
+
+            - 1 de cada 3 webs utiliza librerías de JavaScript obsoletas.
+            - Verificar si tienen o usan funciones, métodos, objetos o metodologías obsoletas.
+            - Vérificar en los sitios basados en estandares oficiales.
+
+        //____ Detectar navegadores obsoletos ____//
+
+            - Detección del navegador y cobertura de múltiples navegadores.
 
 
 

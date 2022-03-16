@@ -23,15 +23,22 @@ primero la (X) y después la tecla complemento.
 -Podemos cambiar las unidades en la barra lateral DER, en una pestaña con el simbolo de un "cono"
 con el nombre de "Scene Properties", y después en la ventana "Units" encontraremos la pestaña "Legths".
 Si oprimimos (G),(R) o (S) + (X),(Y) o (Z), y escribmos un valor numerico el objeto se va a mover en la dirección
-de la segunda tecla que oprimimos y en la medida que le dimos en "Legth".
+de la segunda tecla que oprimimos y en la medida que le dimos en "Legth". Si queremos escalar solamente
+en dos ejes por ejemplo, el eje(X) y el eje(Y) entoces damos (S) + Shift+(Z), de esta manera quedaría
+descartado el eje(Z) al momento de escalar, y solo se escalaría en eje(X) y (Y).
+
+-Si queremos poner nuestros objetos en vista de alambre oprimimos las teclas Shift + (Z).
 
 -Junto al objeto tenemos un punto amarillo, este se llama "pibote" y en relación a ese punto nuesro
 objeto sufre todas las transformaciones, para mover el "pibote" a donde esté el "cursor 3D" le damos
 en la barra superior "Objet"-"Set Origin"-"Origin 3D cursor".
 
+-Si tenemos un objeto y lo queremos llevar al centro de todo el espacio de trabajo, le damos Alt + (G),
+de esta manera se nos movera el pibote y el elemento al centro.
+
 -El "pibote" también está acompañado de un pequeño circulo que lleva el nombre de "cursor 3D",
 ese cursor lo podemos mover con la tecla "shift" + "clic DER", a ese cursor le podemos dar 
-"shift" + (A) y nos mostrará diferentes obciones para agragar  nuestro espacio de trabajo, y para
+"shift" + (A) y nos mostrará diferentes obciones para agregar nuestro espacio de trabajo, y para
 ubicar el cursor en todo el centro del espacio de trabajo le damos la tecla "Shift" + (C).
 
 -Podemos extruir una cara, vertice o arista ubicandonos en ella y oprimiendo la tecla "E" podemos
@@ -40,10 +47,10 @@ extruirla en el eje (X),(Y) o (Z).
 -Podemos dividir un objeto en varias partes usando el eje X, Y y Z, para esto nos ubicamos en el 
 modo edición "edit mode" y oprimimos las teclas "Ctrl" + (R).
 
--Para mover la luz nos pasamos al cursor mover "move" qu elo encontramos en la barra de cursores,
+-Para mover la luz nos pasamos al cursor mover "move" que lo encontramos en la barra de cursores,
 y al igual que un objeto lo podremos mover en los ejes X,Y y Z.
 
--Para colorear noa vamos debemos estar en modo edición "edición edit" y nos vamos a la barra 
+-Para colorear debemos estar en modo edición "edit" y nos vamos a la barra 
 lateral DER en donde se encuentra "Scene Properties" y buscamos una ventana "Material Properties",
 nos vamos a la primera ventana y le damos en el icono del (+) que está a la derecha de esa ventana
 para crear un nuevo material y en la parte inferior de esa misma ventana le cambiamos el nombre,
@@ -54,3 +61,37 @@ ahí cambiaremos el color en "Base color".
 -Para rotar la camara oprimimmos la tecla "N" y en la ventana que nos aparecerá nos iremos a la
 pestaña "View" y chekeraromos la opción "Camara to View" y ya de ahí podremos rotarla y hacer zoom
 con el scroll.
+
+-Con la tecla (i) podremos hacer una marco dentro de una cara, que podrmos utilizar para 
+diferentes propositos como puede hacer darle volumen a una figura.
+
+-Con la tecla Shift + (A) podemos agregar nuevas formás o elementos.
+
+-Para poder duplicar un elemento lo hacemos con las teclas Shift + (D).
+
+-Parapoder suavizar los polígonos de una forma damos clic DER sobre la figura y damos en la opción
+"Shade Smooth", y si necesitamos ver nuevamente los polígonos damos en "Shade Flat" que se encuentra
+abajo de "Shade Smooth". Pero al suavizar los polígonos podemos perder los bordes de la figura, para esto
+nos vamos al la barra lateral DER u buscamos la opción "Object Data Properties"(tiene el símbolo de un triángulo),
+y buscamos la opción "Normals" y chackiamos la opción "Auto Smooth". De esta manera savizamos los polígonos
+sin perder los bordes de la figura.
+
+-Para poder rotar varias figuras al mismos tiempo, simplemente los seleccionamos todos y damos (R) + eje a rotar.
+Pero si qeremos rotar todos los elementos en base a una figura en específico entonces selecionamos uno por uno
+en orden, seleccionando de último el elemento en que queremos que roten todas las figuras, después de esto
+debemos cambiar el pibote a "Active Element", esto lo encontramos en el segundo recuadro que se encuentra debajo
+de una de las opciones de la barra superior pincipal, que se llama "Texture Paint", ahí en ese recuadro
+la opción que necesitamos para poder hacer la rotación, y ya después de esto haremos la rotación.
+
+-Para poder apagar la vista de un elemento lo hacemos con la tecla(H), y para volver a encender la vista
+le damos Alt + (H).
+
+-Para hacer que un elemento, como por ejemplo, la cabeza del mono que que encontramos en blender, quede
+bien bien bicelada y sin polígonos, le damos Ctrl + (2). 
+
+-Para poder hacer vidrio nos vamos dentro de la misma ventana donde agregamos color y buscamos la opción
+"Surface" damos clic y buscamos la opción "Glass BSDF", le bajamos un poco al "Roughness", que lo encontramos
+tres opciones abajo del "Surface". Por ultimo nos vamos a la opción "Render Properties" que la encontramos en 
+misma barra en donde encontramos la opción para agregar color, la opción tiene un ícono de una camara, ahí buscamos
+la opción "Render Engine" y le damos la opción "Cycles". Para no ver el ruido del vidrio vamos a la opción
+"Sampling" "Viewport" y activamos "denoise".
